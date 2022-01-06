@@ -11,6 +11,7 @@
 		A399BB76278737F90099A108 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A399BB75278737F90099A108 /* ContentView.swift */; };
 		A399BB78278737FB0099A108 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A399BB77278737FB0099A108 /* Assets.xcassets */; };
 		A399BB7B278737FB0099A108 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A399BB7A278737FB0099A108 /* Preview Assets.xcassets */; };
+		A399BB8427873AD70099A108 /* WeatherCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A399BB8327873AD70099A108 /* WeatherCardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		A399BB75278737F90099A108 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A399BB77278737FB0099A108 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A399BB7A278737FB0099A108 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A399BB8327873AD70099A108 /* WeatherCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherCardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +53,8 @@
 		A399BB72278737F90099A108 /* Pocket Weather */ = {
 			isa = PBXGroup;
 			children = (
+				A399BB8127873A3E0099A108 /* Model */,
+				A399BB8227873A450099A108 /* View */,
 				A399BB73278737F90099A108 /* Pocket_WeatherApp.swift */,
 				A399BB75278737F90099A108 /* ContentView.swift */,
 				A399BB77278737FB0099A108 /* Assets.xcassets */,
@@ -65,6 +69,21 @@
 				A399BB7A278737FB0099A108 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A399BB8127873A3E0099A108 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A399BB8227873A450099A108 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A399BB8327873AD70099A108 /* WeatherCardView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +157,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A399BB76278737F90099A108 /* ContentView.swift in Sources */,
+				A399BB8427873AD70099A108 /* WeatherCardView.swift in Sources */,
 				A399BB74278737F90099A108 /* Pocket_WeatherApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
