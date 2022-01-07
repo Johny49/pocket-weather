@@ -11,7 +11,7 @@ import SwiftUI
 struct Pocket_WeatherApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainContentView()
         }
     }
 }
