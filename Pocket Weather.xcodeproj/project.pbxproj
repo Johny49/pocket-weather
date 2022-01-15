@@ -13,6 +13,10 @@
 		A399BB7B278737FB0099A108 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A399BB7A278737FB0099A108 /* Preview Assets.xcassets */; };
 		A399BB8427873AD70099A108 /* WeatherCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A399BB8327873AD70099A108 /* WeatherCardView.swift */; };
 		A399BB8627889A4B0099A108 /* ForecastCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A399BB8527889A4B0099A108 /* ForecastCardView.swift */; };
+		A399BB882789026A0099A108 /* Config.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = A399BB872789026A0099A108 /* Config.xcconfig */; };
+		A399BB8A278904110099A108 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = A399BB89278904110099A108 /* Weather.swift */; };
+		A399BB8C278905F80099A108 /* WeatherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A399BB8B278905F80099A108 /* WeatherManager.swift */; };
+		A399BB8F278A2F040099A108 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = A399BB8E278A2F040099A108 /* Location.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +27,11 @@
 		A399BB7A278737FB0099A108 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A399BB8327873AD70099A108 /* WeatherCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherCardView.swift; sourceTree = "<group>"; };
 		A399BB8527889A4B0099A108 /* ForecastCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastCardView.swift; sourceTree = "<group>"; };
+		A399BB872789026A0099A108 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		A399BB89278904110099A108 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
+		A399BB8B278905F80099A108 /* WeatherManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherManager.swift; sourceTree = "<group>"; };
+		A399BB8D278A0C650099A108 /* Pocket-Weather-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Pocket-Weather-Info.plist"; sourceTree = SOURCE_ROOT; };
+		A399BB8E278A2F040099A108 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,9 +45,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A34532B52793228F00F9E8C3 /* VM */ = {
+			isa = PBXGroup;
+			children = (
+				A399BB8B278905F80099A108 /* WeatherManager.swift */,
+			);
+			path = VM;
+			sourceTree = "<group>";
+		};
 		A399BB67278737F90099A108 = {
 			isa = PBXGroup;
 			children = (
+				A399BB872789026A0099A108 /* Config.xcconfig */,
 				A399BB72278737F90099A108 /* Pocket Weather */,
 				A399BB71278737F90099A108 /* Products */,
 			);
@@ -55,10 +73,12 @@
 		A399BB72278737F90099A108 /* Pocket Weather */ = {
 			isa = PBXGroup;
 			children = (
+				A34532B52793228F00F9E8C3 /* VM */,
 				A399BB8127873A3E0099A108 /* Model */,
 				A399BB8227873A450099A108 /* View */,
 				A399BB73278737F90099A108 /* Pocket_WeatherApp.swift */,
 				A399BB75278737F90099A108 /* MainContentView.swift */,
+				A399BB8D278A0C650099A108 /* Pocket-Weather-Info.plist */,
 				A399BB77278737FB0099A108 /* Assets.xcassets */,
 				A399BB79278737FB0099A108 /* Preview Content */,
 			);
@@ -76,6 +96,8 @@
 		A399BB8127873A3E0099A108 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A399BB89278904110099A108 /* Weather.swift */,
+				A399BB8E278A2F040099A108 /* Location.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -148,6 +170,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A399BB7B278737FB0099A108 /* Preview Assets.xcassets in Resources */,
+				A399BB882789026A0099A108 /* Config.xcconfig in Resources */,
 				A399BB78278737FB0099A108 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -159,10 +182,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A399BB8C278905F80099A108 /* WeatherManager.swift in Sources */,
 				A399BB76278737F90099A108 /* MainContentView.swift in Sources */,
 				A399BB8627889A4B0099A108 /* ForecastCardView.swift in Sources */,
 				A399BB8427873AD70099A108 /* WeatherCardView.swift in Sources */,
 				A399BB74278737F90099A108 /* Pocket_WeatherApp.swift in Sources */,
+				A399BB8A278904110099A108 /* Weather.swift in Sources */,
+				A399BB8F278A2F040099A108 /* Location.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -171,6 +197,7 @@
 /* Begin XCBuildConfiguration section */
 		A399BB7C278737FB0099A108 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A399BB872789026A0099A108 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -232,6 +259,7 @@
 		};
 		A399BB7D278737FB0099A108 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A399BB872789026A0099A108 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -296,6 +324,7 @@
 				DEVELOPMENT_TEAM = KA73VU7EWH;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Pocket-Weather-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -326,6 +355,7 @@
 				DEVELOPMENT_TEAM = KA73VU7EWH;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Pocket-Weather-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

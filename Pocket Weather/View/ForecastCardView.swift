@@ -27,7 +27,7 @@ struct ForecastCardView: View {
         }
         
     }
-}
+    }
 
 struct ForecastCardView_Previews: PreviewProvider {
     static var previews: some View {

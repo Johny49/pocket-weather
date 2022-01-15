@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct MainContentView: View {
+    let weatherMan = WeatherManager()
+    
     var body: some View {
         GeometryReader { geometry in
             ZStack {
@@ -16,8 +18,6 @@ struct MainContentView: View {
                 VStack {
                     //Header and Searchbar
                     HStack() {
-                        Text("Pocket Weather")
-                            .font(.largeTitle)
                         Menu() {
                             Text("Saved Location 1")
                             Text("Saved Location 2")
@@ -27,8 +27,15 @@ struct MainContentView: View {
                                 .labelStyle(.iconOnly)
                                 .foregroundColor(.white)
                                 .accessibilityLabel("Saved Locations Menu Button")
-
+                            
                         }
+                        Text("Pocket Weather")
+                            .font(.largeTitle)
+                            .padding()
+                        Button("ºF") {
+                            // call function to toggle C/F
+                        }
+                        .foregroundColor(.white)
                     }
                     RoundedRectangle(cornerRadius: 20)
                         .frame(width: geometry.size.width * 0.9, height: 40)
@@ -55,6 +62,12 @@ struct MainContentView: View {
                 }
             }
             .frame(width: geometry.size.width, height: geometry.size.height, alignment: .center)
+            .onAppear {
+                //call to test location to lat & lon function TODO: cleanup
+                Task {
+                    try await weatherMan.getLatLon(location: "Vancouver")
+                }
+            }
         }
     }
 }
