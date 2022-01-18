@@ -63,9 +63,9 @@ struct MainContentView: View {
             }
             .frame(width: geometry.size.width, height: geometry.size.height, alignment: .center)
             .onAppear {
-                //call to test location to lat & lon function TODO: cleanup
+                //call to getWeather function TODO: cleanup
                 Task {
-                    try await weatherMan.getLatLon(location: "Vancouver")
+                    try await weatherMan.getWeatherData(location: "Vancouver")
                 }
             }
         }

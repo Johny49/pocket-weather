@@ -12,13 +12,25 @@ class WeatherManager {
     // Retrieve stored key for OpenWeather API
     let API_KEY = Bundle.main.infoDictionary?["WEATHER_API_KEY"] as! String
     let urlBase = "http://api.openweathermap.org/"
-    let defaultLocation = Location(name: "Vancouver", state: "British Columbia", country: "CA", lat: 49.2608724, lon: -123.113952)  // TEST DATA: TODO => Remove
-
     
-    func getWeatherData(loc: Location) {
+    func getWeatherData(location: String) async throws -> Weather {
+        let loc = try await getLatLon(location: location)
+        
         // URL to retrieve weather for the returned lat and lon
-        //    static let weatherUrl = "https://api.openweathermap.org/data/2.5/onecall?lat={lat}&lon={lon}&appid={WEATHER_API_KEY}"
-        print(loc)
+        guard let weatherUrl = URL(string: "\(urlBase)data/2.5/onecall?lat=\(loc.lat)&lon=\(loc.lon)&appid=\(API_KEY)")else {
+            fatalError("unable to retrieve location") }
+        
+        let (data, response) = try await URLSession.shared.data(for: URLRequest(url: weatherUrl))
+        guard (response as? HTTPURLResponse)?.statusCode == 200 else {
+            fatalError("Failed to retrieve weather")
+        }
+        // Decode data returned
+        let decoder = JSONDecoder()
+        decoder.dateDecodingStrategy = .secondsSince1970
+        let weatherData = try decoder.decode(Weather.self, from: data)
+        print("data: \(weatherData)")
+        
+        return weatherData
     }
     
     func getLatLon(location: String) async throws -> Location {
